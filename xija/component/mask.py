@@ -4,7 +4,7 @@ import operator
 import numpy as np
 
 try:
-    from Ska.Matplotlib import plot_cxctime
+    from ska_matplotlib import plot_cxctime
 except ImportError:
     pass
 

@@ -9,7 +9,7 @@ from xija.component.base import TelemData
 from xija.component.heat.base import PrecomputedHeatPower
 
 try:
-    from Ska.Matplotlib import plot_cxctime
+    from ska_matplotlib import plot_cxctime
 except ImportError:
     pass
 

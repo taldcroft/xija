@@ -16,8 +16,8 @@ from xija.component.base import ModelComponent
 from xija.component.heat.base import PrecomputedHeatPower
 
 try:
-    from Chandra.Time import DateTime
-    from Ska.Matplotlib import plot_cxctime
+    from chandra_time import DateTime
+    from ska_matplotlib import plot_cxctime
 except ImportError:
     pass
 
@@ -100,7 +100,7 @@ class EarthHeat(PrecomputedHeatPower):
         hp_idxs = healpix.lonlat_to_healpix(lons * u.rad, lats * u.rad)
 
         # Linearly interpolate distances for appropriate healpix pixels.
-        # Code borrowed a bit from Ska.Numpy.Numpy._interpolate_vectorized.
+        # Code borrowed a bit from ska_numpy.Numpy._interpolate_vectorized.
         xin = self.log_earth_vis_dists
         xout = np.log(dists)
         idxs = np.searchsorted(xin, xout)

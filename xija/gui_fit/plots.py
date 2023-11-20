@@ -8,7 +8,7 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure
 from PyQt5 import QtCore, QtWidgets
-from Ska.Matplotlib import cxctime2plotdate, plot_cxctime
+from ska_matplotlib import cxctime2plotdate, plot_cxctime
 
 from xija.limits import get_limit_color
 

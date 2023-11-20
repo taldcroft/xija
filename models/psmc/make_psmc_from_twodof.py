@@ -2,8 +2,8 @@
 import xija
 import numpy as np
 import asciitable
-from Chandra.Time import DateTime
-from Ska.Matplotlib import plot_cxctime
+from chandra_time import DateTime
+from ska_matplotlib import plot_cxctime
 
 pars = dict(acis150 =  28.029,
             acis50  =  54.192,

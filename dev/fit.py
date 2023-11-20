@@ -18,7 +18,7 @@ if __name__ == '__main__':
 import numpy as np
 import sherpa.ui as ui
 from mpi4py import MPI
-from Chandra.Time import DateTime
+from chandra_time import DateTime
 import pyyaks.context as pyc
 
 import clogging   # get rid of this or something

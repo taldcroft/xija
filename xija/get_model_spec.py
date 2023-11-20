@@ -11,7 +11,7 @@ import tempfile
 from pathlib import Path
 from typing import List
 
-from Ska.File import get_globfiles
+from ska_file import get_globfiles
 from ska_helpers import chandra_models
 from ska_helpers.paths import chandra_models_repo_path, xija_models_path
 

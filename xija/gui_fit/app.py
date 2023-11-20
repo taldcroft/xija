@@ -864,7 +864,7 @@ class MainWindow:
     # This is a callback function. The data arguments are ignored
     # in this example. More on callbacks below.
     def __init__(self, model, fit_worker, model_file):
-        import Ska.tdb
+        import ska_tdb
 
         self.model = model
 
@@ -878,7 +878,7 @@ class MainWindow:
                 ):
                     self.hist_msids.append(k)
                 try:
-                    Ska.tdb.msids[v.msid]
+                    ska_tdb.msids[v.msid]
                 except KeyError:
                     pass
                 else:

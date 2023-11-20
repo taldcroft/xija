@@ -2,7 +2,7 @@
 import xija
 import numpy as np
 import matplotlib.pyplot as plt
-from Ska.Matplotlib import pointpair
+from ska_matplotlib import pointpair
 
 start = '2010:001'
 stop = '2011:345'

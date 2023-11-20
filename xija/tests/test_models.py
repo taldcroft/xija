@@ -12,7 +12,7 @@ from xija import Eclipse, HeatSink, Node, Pitch, SolarHeat, ThermalModel, __vers
 from xija.get_model_spec import get_xija_model_names, get_xija_model_spec
 
 try:
-    import Ska.Matplotlib  # noqa
+    import ska_matplotlib  # noqa
 
     HAS_PLOTDATE = True
 except ImportError:

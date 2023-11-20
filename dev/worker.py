@@ -16,7 +16,7 @@ if __name__ == '__main__':
     matplotlib.use('Agg')
 
 import numpy as np
-from Chandra.Time import DateTime
+from chandra_time import DateTime
 from mpi4py import MPI
 import pyyaks.context as pyc
 

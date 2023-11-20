@@ -16,12 +16,12 @@ from typing import List, Optional, Tuple
 
 import numpy as np
 import pyyaks.context as pyc
-import Ska.DBI
-import Ska.Numpy
+import ska_dbi
+import ska_numpy
 from astropy.io import ascii
 
 # Optional packages for model fitting or use on HEAD LAN
-from Chandra.Time import DateTime
+from chandra_time import DateTime
 from cxotime import date2secs
 
 from . import clogging, component, tmal
@@ -366,18 +366,18 @@ class XijaModel(object):
         datestop = DateTime(self.tstop + tpad).date
         logger.info("Fetching msid: %s over %s to %s" % (msid, datestart, datestop))
         try:
-            import Ska.engarchive.fetch_sci as fetch
+            import cheta.fetch_sci as fetch
 
             tlm = fetch.MSID(msid, datestart, datestop, stat="5min")
             tlm.filter_bad_times()
         except ImportError:
-            raise ValueError("Ska.engarchive.fetch not available")
+            raise ValueError("cheta.fetch not available")
         if tlm.times[0] > self.tstart or tlm.times[-1] < self.tstop:
             raise ValueError(
                 "Fetched telemetry does not span model start and "
                 "stop times for {}".format(msid)
             )
-        vals = Ska.Numpy.interpolate(
+        vals = ska_numpy.interpolate(
             getattr(tlm, attr), tlm.times, self.times, method=method
         )
         return vals
@@ -418,7 +418,7 @@ class XijaModel(object):
             )
 
         if times.ndim == 1:  # Data value specification
-            vals = Ska.Numpy.interpolate(data, times, self.times, method="nearest")
+            vals = ska_numpy.interpolate(data, times, self.times, method="nearest")
         elif times.ndim == 2:  # State-value specification
             tstarts = times[0]
             tstops = times[1]

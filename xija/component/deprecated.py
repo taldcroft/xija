@@ -7,7 +7,7 @@ from xija.component.base import ModelComponent
 from xija.component.heat import PrecomputedHeatPower, SolarHeat
 
 try:
-    from Ska.Matplotlib import plot_cxctime
+    from ska_matplotlib import plot_cxctime
 except ImportError:
     pass
 

@@ -3,7 +3,7 @@ import numpy as np
 import six
 
 try:
-    from Ska.Matplotlib import cxctime2plotdate, plot_cxctime
+    from ska_matplotlib import cxctime2plotdate, plot_cxctime
 except ImportError:
     pass
 

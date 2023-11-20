@@ -5,8 +5,8 @@ import numpy as np
 from xija.component.heat.base import ActiveHeatPower, PrecomputedHeatPower
 
 try:
-    from Chandra.Time import DateTime
-    from Ska.Matplotlib import plot_cxctime
+    from chandra_time import DateTime
+    from ska_matplotlib import plot_cxctime
 except ImportError:
     pass
 
